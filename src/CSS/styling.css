@@ -1,0 +1,36 @@
+.App {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.wrapper_container,
+.wrapper_header,
+.podcasts_container,
+.podcast_list_container,
+.podcast_list_container_header,
+.podcast_list_container_list {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.wrapper_header,
+.podcast_list_container_header {
+  text-align: center;
+}
+
+.wrapper_container {
+  border-radius: 5px;
+  outline-style: double;
+}
+
+.podcast_list_container_list ul {
+  padding: 0;
+  margin: 2%;
+  list-style-type: none;
+}
+.podcast_list_container_list li {
+  margin: 2%;
+  text-align: center;
+}
