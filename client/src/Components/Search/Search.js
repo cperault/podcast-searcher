@@ -76,11 +76,6 @@ const Search = ({ setSearchData, setWrapperHeader }) => {
             className: classes.input,
           }}
           error={searchKeywordError.trim() !== "" ? true : false}
-          label={
-            searchKeyword.trim() !== ""
-              ? ""
-              : "Enter a keyword to get started..."
-          }
           helperText={searchKeywordError}
           variant="outlined"
           fullWidth
