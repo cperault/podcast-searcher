@@ -5,7 +5,9 @@ const port = 3080;
 const unirest = require("unirest");
 const dotenv = require("dotenv");
 dotenv.config();
+
 const apiKey = process.env.API_KEY;
+
 app.use(cors());
 
 const apiURL = ["https://listen-api-test.listennotes.com/api/v2"];
@@ -16,16 +18,9 @@ app.get("/podcast/list/:keyword", async (request, response, next) => {
   const results = await unirest
     .get(searchURL)
     .header("X-ListenAPI-Key", process.env.API_KEY);
-  response.json({ message: `You searched: ${searchURL}`, feed: results });
+  response.json({ feed: results });
 });
 
-app.get("/podcast/", (request, response) => {
-  response.send("Backend hit at /podcast/");
-});
-
-app.get("/", (request, response) => {
-  response.send("Backend hit at /");
-});
 app.listen(port, () => {
   console.clear();
   console.log(`Backend server is running on port::${port}`);
