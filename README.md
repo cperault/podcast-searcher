@@ -1,5 +1,5 @@
 # Podcast Player
-React app that fetches podcasts for leisure; made with a React frontend and a Node &amp; MySQL backend.
+React app that fetches podcasts for leisure; made with a React frontend and a Node backend.
 
 <p align="center"> 
 <img src="client/src/media/main_search.png" alt="Main search screen">
