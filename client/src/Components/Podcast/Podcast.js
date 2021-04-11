@@ -15,7 +15,7 @@ const Podcast = ({ podcasts }) => {
         return (
           <div key={index} className="podcast_inner_container">
             <div className="podcast_inner_container_image">
-              <img src={podcast.image} height="200" width="250" alt="" />
+              <img src={podcast.image} height="300" width="350" alt="" />
             </div>
             <div className="podcast_inner_container_details">
               <h2>{podcast.title_original}</h2>

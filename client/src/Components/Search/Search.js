@@ -9,6 +9,7 @@
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import GetPodcasts from "/Users/cricri/Projects/Personal/podcast-player/client/src/Models/Request.js";
+import { makeStyles } from "@material-ui/core/styles";
 
 const Search = ({ setSearchData, setWrapperHeader }) => {
   const [searchKeyword, setSearchKeyword] = useState("");
@@ -23,8 +24,12 @@ const Search = ({ setSearchData, setWrapperHeader }) => {
       } catch (e) {
         setSearchKeywordError(e);
       } finally {
-        setWrapperHeader(searchKeyword);
-        setSearchData(results);
+        if (results.length > 0) {
+          setWrapperHeader(searchKeyword);
+          setSearchData(results);
+        } else {
+          setSearchKeywordError("No podcasts found...:(");
+        }
       }
     } else {
       setSearchKeywordError("Please enter a keyword.");
@@ -35,10 +40,41 @@ const Search = ({ setSearchData, setWrapperHeader }) => {
     handleSubmit();
   };
 
+  const StyledTextField = makeStyles({
+    root: {
+      "& label.Mui-focused": {
+        color: "black",
+      },
+      "& .MuiInput-underline:after": {
+        borderBottomColor: "black",
+      },
+      "& .MuiOutlinedInput-root": {
+        "& fieldset": {
+          borderColor: "black",
+        },
+        "&:hover fieldset": {
+          borderColor: "black",
+        },
+        "&.Mui-focused fieldset": {
+          borderColor: "black",
+        },
+      },
+    },
+    input: {
+      color: "black",
+    },
+  });
+
+  const classes = StyledTextField();
+
   return (
     <div className="search_container">
       <form autoComplete="off" onSubmit={handleSubmit}>
         <TextField
+          className={classes.root}
+          InputProps={{
+            className: classes.input,
+          }}
           error={searchKeywordError.trim() !== "" ? true : false}
           label={
             searchKeyword.trim() !== ""
