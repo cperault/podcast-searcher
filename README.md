@@ -1,9 +1,7 @@
 # Podcast Player
-
 React app that fetches podcasts for leisure; made with a React frontend and a Node backend.
 
 # Getting Started with Podcast Player
-
 - Clone this repository
 - Before we execute the run scripts, there are some things that you will need to configure locally within your project:
   - At the root of the `client` directory and at the root of `server` directory, create a `.env` file
