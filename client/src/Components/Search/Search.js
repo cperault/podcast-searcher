@@ -8,7 +8,7 @@
 
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
-import GetPodcasts from "/Users/cricri/Projects/Personal/podcast-player/client/src/Models/Request.js";
+import { GetPodcasts } from "/Users/cricri/Projects/Personal/podcast-player/client/src/Models/Request.js";
 import { makeStyles } from "@material-ui/core/styles";
 
 const Search = ({ setSearchData, setWrapperHeader }) => {
@@ -18,7 +18,7 @@ const Search = ({ setSearchData, setWrapperHeader }) => {
   const handleSubmit = async (event) => {
     if (event) event.preventDefault();
     let results = [];
-    if (searchKeyword.trim() !== "") {
+    if (searchKeyword !== "") {
       try {
         results = await GetPodcasts(searchKeyword);
       } catch (e) {
@@ -36,7 +36,7 @@ const Search = ({ setSearchData, setWrapperHeader }) => {
     }
   };
 
-  const onBlurHandler = (text) => {
+  const onBlurHandler = () => {
     handleSubmit();
   };
 
@@ -75,12 +75,12 @@ const Search = ({ setSearchData, setWrapperHeader }) => {
           InputProps={{
             className: classes.input,
           }}
-          error={searchKeywordError.trim() !== "" ? true : false}
+          error={searchKeywordError !== "" ? true : false}
           helperText={searchKeywordError}
           variant="outlined"
           fullWidth
           autoFocus
-          onBlur={(text) => onBlurHandler(text.target.value)}
+          onBlur={() => onBlurHandler()}
           onChange={(text) => setSearchKeyword(text.target.value.trim())}
         />
       </form>

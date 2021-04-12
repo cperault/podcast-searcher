@@ -9,11 +9,19 @@
 import axios from "axios";
 
 const GetPodcasts = async (searchKeyword) => {
-  const url = "http://localhost:3080/podcast/list";
-  if (searchKeyword.trim() !== "") {
+  const url = process.env.REACT_APP_PODCAST_API_URL;
+  if (searchKeyword !== "") {
     let res = await axios.get(url + `/${encodeURIComponent(searchKeyword)}`);
-    return res.data.feed.body.results;
+    return res.data.podcasts.body.results;
   }
 };
 
-export default GetPodcasts;
+const GetEpisodes = async (podcastID) => {
+  const url = process.env.REACT_APP_EPISODE_API_URL;
+  if (podcastID !== "") {
+    let res = await axios.get(url + `/${encodeURIComponent(podcastID)}`);
+    return res.data.episodes.body.episodes;
+  }
+};
+
+export { GetPodcasts, GetEpisodes };
