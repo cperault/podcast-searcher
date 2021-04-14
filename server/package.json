@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "Backend for podcast-player",
+  "description": "Backend for podcast-searcher",
   "main": "server.js",
   "scripts": {
     "start": "node server.bundle.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cperault/podcast-player.git"
+    "url": "git+https://github.com/cperault/podcast-searcher.git"
   },
   "author": "Christopher Perault",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cperault/podcast-player/issues"
+    "url": "https://github.com/cperault/podcast-searcher/issues"
   },
-  "homepage": "https://github.com/cperault/podcast-player#readme",
+  "homepage": "https://github.com/cperault/podcast-searcher#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",

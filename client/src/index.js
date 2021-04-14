@@ -1,7 +1,7 @@
 /*************************************************************************************************************
  File:         index.js
  Author:       Christopher Perault
- Project:      podcast-player
+ Project:      podcast-searcher
  Date:         April 6th, 2021
  Description:  Top level file that loads everything from `App.js` into the `root` ID of the `index.html` file.
  *************************************************************************************************************/

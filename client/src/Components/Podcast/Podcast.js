@@ -1,14 +1,14 @@
 /*************************************************************************************************************
  File:         Podcast.js
  Author:       Christopher Perault
- Project:      podcast-player
+ Project:      podcast-searcher
  Date:         April 10th, 2021
  Description:  Child component that will represent and render a single podcast with its details and a button
                to expand a modal in which available episodes for the podcast are listed and playable.
  *************************************************************************************************************/
 
 import React, { useState } from "react";
-import { GetEpisodes } from "/Users/cricri/Projects/Personal/podcast-player/client/src/Models/Request.js";
+import { GetEpisodes } from "../../Models/Request.js";
 import Button from "@material-ui/core/Button";
 import EpisodeModal from "./EpisodeModal.js";
 

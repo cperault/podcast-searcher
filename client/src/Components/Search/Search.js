@@ -1,14 +1,14 @@
 /*************************************************************************************************************
  File:         Search.js
  Author:       Christopher Perault
- Project:      podcast-player
+ Project:      podcast-searcher
  Date:         April 10th, 2021
  Description:  Child component that will let the user search for podcasts.
  *************************************************************************************************************/
 
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
-import { GetPodcasts } from "/Users/cricri/Projects/Personal/podcast-player/client/src/Models/Request.js";
+import { GetPodcasts } from "../../Models/Request.js";
 import { makeStyles } from "@material-ui/core/styles";
 
 const Search = ({ setSearchData, setWrapperHeader }) => {

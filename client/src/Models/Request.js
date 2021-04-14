@@ -1,7 +1,7 @@
 /*************************************************************************************************************
  File:         Request.js
  Author:       Christopher Perault
- Project:      podcast-player
+ Project:      podcast-searcher
  Date:         April 10th, 2021
  Description:  Helper function that sends a GET request to the NodeJS backend.
  *************************************************************************************************************/

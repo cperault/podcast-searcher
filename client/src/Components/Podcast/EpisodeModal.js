@@ -1,7 +1,7 @@
 /*************************************************************************************************************
  File:         EpisodeModal.js
  Author:       Christopher Perault
- Project:      podcast-player
+ Project:      podcast-searcher
  Date:         April 13th, 2021
  Description:  Modal component that will show all available episodes of the selected podcast, as well as the
                ability to play them.
