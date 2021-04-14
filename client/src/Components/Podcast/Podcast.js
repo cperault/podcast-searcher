@@ -18,7 +18,6 @@ const Podcast = ({ podcasts }) => {
   const [episodes, setEpisodes] = useState([]);
 
   const handleModal = (podcastTitle, podcastID) => {
-    console.log(podcastID);
     setSelectedPodcast(podcastTitle);
     handleEpisodeFetch(podcastID);
     setOpenModal(!openModal);
