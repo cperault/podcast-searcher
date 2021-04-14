@@ -1,8 +1,8 @@
-# Podcast Player
+# Podcast Searcher
 
-React app that fetches podcasts for leisure; made with a React frontend and a Node backend.
+React app that fetches podcasts for leisure and lets you listen to them; made with a React frontend and a Node backend.
 
-# Getting Started with Podcast Player
+# Getting Started with Podcast Searcher
 
 - Clone this repository
 - Before we execute the run scripts, there are some things that you will need to configure locally within your project:
