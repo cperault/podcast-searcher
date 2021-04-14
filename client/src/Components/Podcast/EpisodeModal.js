@@ -108,7 +108,6 @@ const EpisodeModal = ({
                         <audio
                           id={`podcastAudio-${index}`}
                           src={episode.audio}
-                          preload="auto"
                         ></audio>
                         {isPlaying.includes(episode.id) ? (
                           <PauseCircleOutlineIcon />

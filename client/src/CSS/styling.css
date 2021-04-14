@@ -114,6 +114,10 @@ body {
   border-radius: 50%;
 }
 
+.wrapper_footer {
+  margin-top: 20px;
+}
+
 @media only screen and (max-width: 780px) {
   .search_container {
     width: 60% !important;

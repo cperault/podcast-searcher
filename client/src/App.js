@@ -14,6 +14,7 @@ import Search from "./Components/Search/Search.js";
 import Podcast from "./Components/Podcast/Podcast.js";
 import Button from "@material-ui/core/Button";
 import KeyboardBackspaceIcon from "@material-ui/icons/KeyboardBackspace";
+import ListenNotesLogo from "./media/listen_notes_logo.png";
 
 const App = () => {
   const [searchData, setSearchData] = useState([]);
@@ -52,7 +53,17 @@ const App = () => {
         <Switch>
           <Route exact path={["/", "/home"]}>
             {searchData.length > 0 ? (
-              <Podcast podcasts={searchData} />
+              <React.Fragment>
+                <Podcast podcasts={searchData} />
+                <footer className="wrapper_footer">
+                  <img
+                    src={ListenNotesLogo}
+                    alt="Logo for LISTEN NOTES API that says Powered by LISTEN NOTES"
+                    height="100%"
+                    width="100%"
+                  />
+                </footer>
+              </React.Fragment>
             ) : (
               <Search
                 setSearchData={setSearchData}
