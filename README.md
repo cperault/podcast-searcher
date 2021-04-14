@@ -1,7 +1,9 @@
 # Podcast Player
+
 React app that fetches podcasts for leisure; made with a React frontend and a Node backend.
 
 # Getting Started with Podcast Player
+
 - Clone this repository
 - Before we execute the run scripts, there are some things that you will need to configure locally within your project:
   - At the root of the `client` directory and at the root of `server` directory, create a `.env` file
@@ -26,10 +28,16 @@ Have fun, be respectful, and feel free to let me know what you think or ask for 
 <img src="client/src/media/no_podcasts_found.png" alt="Search screen with no results found">
 </p>
 <p align="center">
-<img src="client/src/media/empty_search_on_enter.png" alt="Search screen with blank searc">
+<img src="client/src/media/empty_search_on_enter.png" alt="Search screen with blank search">
 </p>
 <p align="center">
 <img src="client/src/media/empty_search_on_blur.png" alt="Search screen on blur without input">
+</p>
+<p align="center">
+<img src="client/src/media/search_results.png" alt="Results showing podcasts searched from the initial search screen">
+</p>
+<p align="center">
+<img src="client/src/media/episode_list_and_playback.png" alt="Modal showing 10 available episodes for a selected podcast">
 </p>
 <p align="center">
 <img src="client/src/media/listen_notes_logo.png" alt="Listen Notes API Logo">

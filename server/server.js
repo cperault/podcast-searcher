@@ -23,8 +23,7 @@ const getPodcasts = async (searchKeyword) => {
 };
 
 const getEpisodes = async (podcastID) => {
-  let apiURL = `https://listen-api.listennotes.com/api/v2/podcasts/${podcastID}?next_episode_pub_date=1479154463000&sort=recent_first`;
-
+  let apiURL = `https://listen-api.listennotes.com/api/v2/podcasts/${podcastID}?sort=recent_first`;
   return await callAPI(apiURL);
 };
 
